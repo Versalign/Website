@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda&display=swap');
+
+
+
 
 body{
-    background-color: rgb(255, 255, 255);
-    font-family: "Monda", sans-serif;
-    font-optical-sizing: auto;
-    margin:0px;
-    overflow-x: hidden;
+  font-optical-sizing: auto;
+  margin:0px;
+  overflow-x: hidden;
+  background: linear-gradient(270deg, #229422, #fbe9ff, #b5f4ff, #ffffff);
+  background-size: 800% 800%;
+  animation: gradientFlow 40s ease infinite;
 }
 
+@keyframes gradientFlow {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+
+/*NAVIGATION BAR*/
 .topnav{
     background-color:#229422;
     margin:0px;
@@ -25,42 +38,201 @@ body{
 }
 
 .topnav a:hover{
-    background-color:#229422;
+    background-color:#003e00;
     width: auto;
     color:white;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
+.topnav img {
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: logoFlyIn 1.5s ease-out forwards;
+}
+
+@keyframes logoFlyIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+/*IMAGES*/
 img{
   max-width: 100%;
   height: auto;
 }
 
 
+/*BOX*/
 .Box{
   width:auto;
   height: auto;
-  border: 5px solid #00c100;
+  border: 5px solid #229422;
   box-sizing: border-box;
   margin:15px;
   padding:10px;
   align-items: center;
   border-radius: 10px;
 
-
 }
 
+
+
+/*TEXT*/
 h1{
     font-size:20px;
-    color:#000000;
-   
+    color:#ffffff;
+    font-family: "Monda", sans-serif;
 }
 
 p2{
     font-size: 10px;
     text-align: right;
+      font-family: "Monda", sans-serif;
 }
 
+
+/*ANIMATION FOR TEXT Homepage*/
+.Explain {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: explainFadeInUp 2s ease-out forwards;
+  width:auto;
+  height: auto;
+  margin:15px;
+  padding:10px;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 1px #000000;
+  font-family: "Monda", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 23px;
+background: rgba(0, 0, 0, 0.4); 
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+
+}
+
+@keyframes explainFadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+/*ANIMATION FOR TEXT*/
+.Listing {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: ListingFadeInUp 2s ease-out forwards;
+  width:auto;
+  height: auto;
+  margin:15px;
+  padding:15px;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 1px #000000;
+  font-family: "Monda", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  background: rgba(0, 0, 0, 0.4); 
+  border-radius: 15px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+
+}
+
+@keyframes ListingFadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.Listing li {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: listingFlyInLeft 0.8s ease-out forwards;
+  animation-delay: calc(0.2s * var(--i));
+  /* Use a custom property for staggered delay */
+}
+
+@keyframes listingFlyInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+
+
+.listing-row {
+  display: inline-flex;
+  align-items: center;
+  
+}
+
+.listing-img {
+  height: 100%;
+  width: 100%;
+  min-width: 200px;
+  flex: 1;
+  margin:20px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  
+}
+
+
+
+/*SLIDESHOW*/
+.slideshow-container {
+  /* This is the window */
+  width: 100%;
+  overflow: hidden; /* Hides images that are outside the container */
+  position: relative;
+}
+
+.slideshow-inner {
+  /* This container holds the images and is what gets animated */
+  display: flex;
+  white-space: nowrap; /* Prevents images from wrapping to the next line */
+  animation: scroll-left-to-right 20s linear infinite; /* Adjust time to change speed */
+  font-size: 0;
+  width: max-content;
+}
+
+.slideshow-inner img {
+  /* Styles for the individual images */
+  height: 200px; /* Set a fixed height for your banner */
+ width: auto;
+ display: inline-block;
+ 
+}
+
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
+/*FOOTER*/
 
 footer{
     background-color: #003e00;
@@ -72,12 +244,7 @@ footer{
     font-size: 15px;
 }
 
-
-
-
-
-
-
+/*Social Media Icons*/
 .fa {
   padding: 15px;
   font-size: 15px;
@@ -105,38 +272,4 @@ footer{
 .fa-linkedin {
   background: #007bb5;
   color: white;
-}
-
-
-
-.slideshow-container {
-  /* This is the window */
-  width: 100%;
-  overflow: hidden; /* Hides images that are outside the container */
-  
-}
-
-.slideshow-inner {
-  /* This container holds the images and is what gets animated */
-  display: inline-block;
-  white-space: nowrap; /* Prevents images from wrapping to the next line */
-  animation: scroll-left-to-right 20s linear infinite; /* Adjust time to change speed */
-
-}
-
-.slideshow-inner img {
-  /* Styles for the individual images */
-  height: 200px; /* Set a fixed height for your banner */
- width: auto;
- display: inline-block;
- 
-}
-
-@keyframes scroll-left-to-right {
-  0% {
-    transform: translateX(0); /* Start position */
-  }
-  100% {
-    transform: translateX(-50%);
-  }
 }
