@@ -1,0 +1,142 @@
+
+body{
+    background-color: rgb(255, 255, 255);
+    font-family: "Monda", sans-serif;
+    font-optical-sizing: auto;
+    margin:0px;
+    overflow-x: hidden;
+}
+
+.topnav{
+    background-color:#229422;
+    margin:0px;
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+   
+}
+
+.topnav a{
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 20px 30px;
+    text-align: right;
+}
+
+.topnav a:hover{
+    background-color:#229422;
+    width: auto;
+    color:white;
+    border-radius: 10px;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+.Box{
+  width:auto;
+  height: auto;
+  border: 5px solid #00c100;
+  box-sizing: border-box;
+  margin:15px;
+  padding:10px;
+  align-items: center;
+  border-radius: 10px;
+
+
+}
+
+h1{
+    font-size:20px;
+    color:#000000;
+   
+}
+
+p2{
+    font-size: 10px;
+    text-align: right;
+}
+
+
+footer{
+    background-color: #003e00;
+    color:white;
+    padding: 10px;
+     bottom: 0;
+     float: bottom;
+     position: relative;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+.fa {
+  padding: 15px;
+  font-size: 15px;
+  width: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 10px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+
+
+.slideshow-container {
+  /* This is the window */
+  width: 100%;
+  overflow: hidden; /* Hides images that are outside the container */
+  
+}
+
+.slideshow-inner {
+  /* This container holds the images and is what gets animated */
+  display: inline-block;
+  white-space: nowrap; /* Prevents images from wrapping to the next line */
+  animation: scroll-left-to-right 20s linear infinite; /* Adjust time to change speed */
+
+}
+
+.slideshow-inner img {
+  /* Styles for the individual images */
+  height: 200px; /* Set a fixed height for your banner */
+ width: auto;
+ display: inline-block;
+ 
+}
+
+@keyframes scroll-left-to-right {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
