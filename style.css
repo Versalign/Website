@@ -10,6 +10,7 @@ body{
   background: linear-gradient(270deg, #229422, #fbe9ff, #b5f4ff, #ffffff);
   background-size: 800% 800%;
   animation: gradientFlow 40s ease infinite;
+    font-family: "Monda", sans-serif;
 }
 
 @keyframes gradientFlow {
@@ -383,4 +384,61 @@ footer{
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+
+
+
+.service-box {
+  margin:5px;
+  max-width: 400px;
+  padding: 5px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.service-box:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.3rem;
+  
+  font-weight: bold;
+  background: #229422;
+  color: #fff;
+  padding: 18px 20px;
+
+}
+
+.service-header i {
+  font-size: 1.7rem;
+}
+
+.service-content {
+  display: none;
+  padding: 18px 20px;
+  color: #222;
+  font-size: 1rem;
+  background: rgba(255,255,255,0.95);
+}
+.service-box.active .service-content {
+  display: block;
+  animation: fadeInBox 0.5s;
+}
+
+@keyframes fadeInBox {
+  from { opacity: 0; transform: translateY(-10px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+
+.service-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
 }
