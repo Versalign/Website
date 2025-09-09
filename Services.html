@@ -5,30 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-    <div class = "topnav">
+     <header>
+  <div class="topnav">
     <img src="Versalign.png" alt="Versalign Logo" width="auto" height="auto">
-
-    <a href="index.html">Home</a>
-    <a class="active" href="Services.html">Services</a>
-    <a href="About.html">About Us</a>
-    <a href="Contact.html">Contact Us</a>
-    </div> 
-    </header>
-
+    <div class="nav-links" id="myLinks">
+      <a class="active" href="index.html">Home</a>
+      <a href="Services.html">Services</a>
+      <a href="About.html">About Us</a>
+      <a href="Contact.html">Contact Us</a>
+    </div>
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</header>
     <main>
        
 
+<div class="service-box-grid">
+
 <!-- Technology Support & Maintenance-->
 <div class="service-box" id="support">
-<div class="service-box">
   <div class="service-header">
-    <i class="fa fa-desktop"></i>
+    <i class="fa fa-wrench"></i>
     <span>Technology Support & Maintenance</span>
+        <span class="close-btn">&times;</span>
   </div>
   <div class="service-content">
     <b>Help Desk Services:</b>
@@ -52,17 +58,19 @@ Versalign works with clients to best determine when and how to upgrade equipment
 <b>IMAC’s (Installations, Moves, Adds, Changes):</b>
 <p>Versalign can help clients effectively track their infrastructure installs, moves, adds, and changes through our IMACs service.
 </p>
+<b>
+<a href="Contact.html">Contact Us</a></b>
   </div>
 </div>
-</div>
+
 
 
 <!-- Network infrastructure-->
 <div class="service-box" id="network">
-<div class="service-box">
   <div class="service-header">
-    <i class="fa fa-desktop"></i>
+    <i class="fa fa-sitemap"></i>
     <span>Network Infrastructure</span>
+      <span class="close-btn">&times;</span>
   </div>
   <div class="service-content">
     <b>Network Support Services:</b>
@@ -79,34 +87,37 @@ Versalign works with clients to best determine when and how to upgrade equipment
    </p>
   <p> Versalign's Internetworking consultants can assist you with selecting the right internet working technologies. Our strategic partnerships with leading internetworking technology manufacturers provide a wide range of solutions from which to choose. When your needs include internal or interoffice data communications, data and voice consolidation, high- speed interconnects to support real- time video services, or wireless and mobile technologies, our consultants and engineers can assess, design and implement a cost effective, quality solution to meet your business needs.
 </p>
-</div>
+<b>
+<a href="Contact.html">Contact Us</a></b>
 </div>
 </div>
 
 
 <!-- Consulting -->
 <div class="service-box" id="consulting">
-<div class="service-box">
   <div class="service-header">
-    <i class="fa fa-desktop"></i>
+    <i class="fa fa-lightbulb-o"></i>
     <span>Consulting Services</span>
+      <span class="close-btn">&times;</span>
   </div>
   <div class="service-content">
     <b>Staff Augmentation:</b>
     <p>In today’s marketplace, the demand for IT talent is greater than the availability of qualified and experienced’ people.</p>
     <p>Versalign provides technically skilled, enthusiastic and motivated personnel to fill our clients’ temporary and permanent positions. From Desktop to Enterprise Network Operations, the versalign staffing team quickly identifies the right person, enabling clients to focus on their core business.</p>
     <p>Our personnel are available for daily, weekly, monthly or long term assignments for Application and Web Development, Desktop support, LAN support, Moves/ Adds and Changes, Project Management and Special Projects.</p>
+    <b>
+<a href="Contact.html">Contact Us</a></b>
 </div>
 </div>
-</div>
+
 
 
 <!-- Cyber Security -->
  <div class="service-box" id="cybersecurity">
-<div class="service-box">
   <div class="service-header">
-    <i class="fa fa-desktop"></i>
+    <i class="fa fa-shield"></i>
     <span>Cybersecurity Solutions</span>
+      <span class="close-btn">&times;</span>
   </div>
   <div class="service-content">
     <b>Internetworking Security:</b>
@@ -115,18 +126,20 @@ Versalign works with clients to best determine when and how to upgrade equipment
 <p>The next step in the process, Inclusion, prevents corporate personnel from utilizing company services to perform non- productive functions; such as, unauthorized web browsing and accessing restricted sites and information.</p>
 <p>Additionally, with Intrusion Detection, our clients can positively identify attacks, take action and prevent future unwanted intrusions.</p>
 <p>Lastly, Secure Authentication provides our clients with a mechanism that allows local and remote personnel to access corporate information services in a secure manner.</p>
-<p>Maximize your investments in communication services by controlling how information is transmitted by prioritization. Assigning priority to business critical over less important Internet traffic will enhance quality of service.</p>       
+<p>Maximize your investments in communication services by controlling how information is transmitted by prioritization. Assigning priority to business critical over less important Internet traffic will enhance quality of service.</p>    
+<b>
+<a href="Contact.html">Contact Us</a></b>
 </div>
 </div>
-</div>
+
 
 
 <!-- Technology Recycling -->
  <div class="service-box" id="recycling">
-<div class="service-box">
   <div class="service-header">
-    <i class="fa fa-desktop"></i>
+    <i class="fa fa-recycle"></i>
     <span>Technology Recycling</span>
+      <span class="close-btn">&times;</span>
   </div>
   <div class="service-content">
     <b>PC Disposal</b>
@@ -139,17 +152,19 @@ Versalign offers clients a secure and environmentally responsible way to dispose
 <li>Asset Recovery</li>
 </ul>   
 </p>
+<b>
+<a href="Contact.html">Contact Us</a></b>
   </div>
 </div>
-</div>
+
 
 
 <!-- AV -->
  <div class="service-box" id="av">
-<div class="service-box">
   <div class="service-header">
-    <i class="fa fa-desktop"></i>
+    <i class="fa fa-video-camera"></i>
     <span>Audio/Visual Solutions</span>
+      <span class="close-btn">&times;</span>
   </div>
   <div class="service-content">
 
@@ -166,20 +181,19 @@ Versalign offers clients a secure and environmentally responsible way to dispose
         <li><strong>Consultation and Design:</strong> Our experts work closely with you to understand your specific needs, providing professional consultation and designing a custom AV system that meets your business goals and fits your space perfectly.</li>
         <li><strong>Installation and Ongoing Support:</strong> We handle the entire installation process with precision and care, and our commitment doesn't end there—we offer ongoing support to ensure your systems perform optimally for years to come.</li>
     </ul>
-
+<b>
+<a href="Contact.html">Contact Us</a></b>
   </div>
 </div>
-</div>
-
 
 
 
 <!-- Cloud -->
  <div class="service-box" id="cloud">
-<div class="service-box">
   <div class="service-header">
-    <i class="fa fa-desktop"></i>
+    <i class="fa fa-cloud"></i>
     <span>Cloud Services</span>
+      <span class="close-btn">&times;</span>
   </div>
   <div class="service-content">
     <b>At Versalign, we understand that a modern business requires a scalable, secure, and flexible IT infrastructure. Our cloud services are designed to help you harness the power of the cloud to streamline operations, enhance security, and drive growth. We work with leading cloud platforms to provide solutions that are perfectly aligned with your business objectives. At Versalign, we understand that a modern business requires a scalable, secure, and flexible IT infrastructure. Our cloud services are designed to help you harness the power of the cloud to streamline operations, enhance security, and drive growth. We work with leading cloud platforms to provide solutions that are perfectly aligned with your business objectives.</b>
@@ -194,18 +208,19 @@ Versalign offers clients a secure and environmentally responsible way to dispose
         <li><strong>Cloud Backup Solutions:</strong> Protect your critical business data with our reliable cloud backup solutions. We offer robust data protection to ensure business continuity in the face of data loss or system failures.</li>
         <li><strong>Cloud Professional Services:</strong> Our team of cloud specialists provides strategic consulting, assessment, and planning to help you plot a clear, customer-focused direction for your cloud adoption journey.</li>
     </ul>
+    <b>
+<a href="Contact.html">Contact Us</a></b>
   </div>
-</div>
 </div>
 
 
 
 <!-- Software Development -->
  <div class="service-box" id="software">
-<div class="service-box">
   <div class="service-header">
-    <i class="fa fa-desktop"></i>
+    <i class="fa fa-code"></i>
     <span>Software Development</span>
+      <span class="close-btn">&times;</span>
   </div>
   <div class="service-content">
     <b>We build tailored software solutions from the ground up to meet your unique business needs and specifications. Our process involves requirements gathering, design, development, testing, and deployment to ensure a perfect fit</b>
@@ -232,9 +247,37 @@ Versalign offers clients a secure and environmentally responsible way to dispose
 <strong>Maintenance and Support</strong>: Our commitment doesn't end at deployment. We offer ongoing maintenance, support, and updates to ensure your software remains secure, up-to-date, and performs optimally.
 </li>
 </ul>
+<b>
+<a href="Contact.html">Contact Us</a></b>
   </div>
 </div>
+
+
+
+
+
+
+<!-- Structured Cabling -->
+ <div class="service-box" id="cabling">
+  <div class="service-header">
+    <i class="fa fa-wrench"></i>
+    <span>Structured Cabling</span>
+      <span class="close-btn">&times;</span>
+  </div>
+  <div class="service-content">
+    <b>Telecommunications Cabling:</b>
+    <p>Versalign provides comprehensive telecommunications cabling services, including the design, installation, and maintenance of structured cabling systems. Our solutions support voice, data, and video communications, ensuring reliable connectivity for your business operations.</p>
+<br>  
+<b>
+<a href="Contact.html">Contact Us</a></b>
 </div>
+</div>
+
+</div>
+
+
+
+
 
 
 
