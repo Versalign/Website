@@ -29,6 +29,7 @@ body{
     padding: 20px 15px;
     display: flex;
     align-items: center;
+    overflow: hidden;
    
 }
 
@@ -64,8 +65,8 @@ body{
   display: none; /* Hide the hamburger icon by default on desktop */
 }
 /* --- Mobile Styles --- */
-@media screen and (max-width: 600px) {
-  /* Hide the regular links on screens smaller than 600px */
+@media screen and (max-width: 800px) {
+  /* Hide the regular links on screens smaller than 800px */
   .topnav .nav-links {
     display: none;
   }
@@ -778,8 +779,6 @@ margin-right: 20px;
 
 
 /*Contact Form*/
-
-
 form {
 margin:40px;
 border: #000000 2px solid;
@@ -805,7 +804,6 @@ form textarea {
   width:300px;
 
 }
-
 
 form button {
   font-weight: 700;
