@@ -1,3 +1,4 @@
+//Service Box Expand/Collapse
 document.querySelectorAll('.service-header').forEach(header => {
   header.addEventListener('click', function(e) {
     // If X is clicked, close the box
@@ -16,6 +17,9 @@ document.querySelectorAll('.service-header').forEach(header => {
     document.body.style.overflow = 'hidden'; // Prevent background scroll
   });
 });
+
+
+
 
 // Open box if navigated via anchor
 window.addEventListener('DOMContentLoaded', function() {
@@ -38,4 +42,12 @@ window.addEventListener('DOMContentLoaded', function() {
   function toggleMenu() {
     var nav = document.querySelector(".topnav");
     nav.classList.toggle("responsive");
+ 
+// Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon
+  var x = document.getElementById("myLinks");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
   }
+}
