@@ -14,12 +14,13 @@ body{
   animation: gradientFlow 40s ease infinite;
     font-family: "Monda", sans-serif;
 }
-
+/*Background*/
 @keyframes gradientFlow {
   0% {background-position: 0% 50%;}
   50% {background-position: 100% 50%;}
   100% {background-position: 0% 50%;}
 }
+
 
 
 /*NAVIGATION BAR*/
@@ -29,6 +30,8 @@ body{
     padding: 20px 15px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    position: relative;
     overflow: hidden;
    
 }
@@ -42,7 +45,7 @@ body{
 }
 
 .topnav a:hover{
-    background-color:#003e00;
+    background-color:#229422;
     width: auto;
     color:white;
     border-radius: 8px;
@@ -52,7 +55,10 @@ body{
   opacity: 0;
   transform: translateX(-100px);
   animation: logoFlyIn 1.5s ease-out forwards;
+  height: 48px;
+  margin-right: 16px;
 }
+
 
 @keyframes logoFlyIn {
   to {
@@ -60,43 +66,90 @@ body{
     transform: translateX(0);
   }
 }
-/* --- Desktop Styles (default) --- */
-.topnav .icon {
-  display: none; /* Hide the hamburger icon by default on desktop */
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
 }
-/* --- Mobile Styles --- */
+
+.topnav a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 20px 30px;
+  text-align: right;
+  transition: background 0.2s;
+}
+
+
+/* Hamburger icon hidden by default */
+.topnav .icon {
+  display: none;
+}
+
+/* --- MOBILE MENU --- */
 @media screen and (max-width: 800px) {
-  /* Hide the regular links on screens smaller than 800px */
-  .topnav .nav-links {
+  .nav-links {
     display: none;
   }
-
-  /* Show the hamburger icon on screens smaller than 600px */
   .topnav .icon {
     display: block;
-    position: absolute; /* Position the icon relative to the topnav container */
+    position: absolute;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 10001;
   }
-
-  /* Styles for the visible mobile menu */
   .topnav.responsive .nav-links {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding-top: 50px; /* Add some space for the icon at the top */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #003e00;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
   }
-
-  /* Additional styling for the links in the mobile menu */
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
+  .topnav.responsive .nav-links a {
+    font-size: 2rem;
+    padding: 24px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+  .topnav.responsive .close-nav {
+    display: block !important;
+    position: absolute;
+    top: 24px;
+    right: 32px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    z-index: 10002;
   }
 }
 
 
+
+
+
+/* Update slogan z-index to be lower than navigation */
+.slogan {
+  position: relative;
+  z-index: 1;
+  /* ...existing styles... */
+}
 
 /*TEXT*/
 h1{
@@ -106,9 +159,9 @@ h1{
 }
 
 p2{
-    font-size: 10px;
-    text-align: right;
-      font-family: "Monda", sans-serif;
+  font-size: 10px;
+  text-align: right;
+  font-family: "Monda", sans-serif;
 }
 
 h3{
@@ -150,7 +203,7 @@ background: rgba(0, 0, 0, 0.4);
 
 
 
-/*ANIMATION FOR home page explanation*/
+/*ANIMATION FOR home page listings*/
 .Listing {
   opacity: 0;
   transform: translateY(30px);
@@ -226,7 +279,7 @@ background: rgba(0, 0, 0, 0.4);
   /* This container holds the images and is what gets animated */
   display: flex;
   white-space: nowrap; /* Prevents images from wrapping to the next line */
-  animation: scroll-left-to-right 40s linear infinite; /* Adjust time to change speed */
+  animation: scroll-left-to-right 60s linear infinite; /* Adjust time to change speed */
   font-size: 0;
   width: max-content;
 }
@@ -406,6 +459,7 @@ footer{
     transform: translateY(0);
   }
 }
+
 
 
 
@@ -687,7 +741,7 @@ footer{
   animation: serviceBoxFloatIn 0.8s cubic-bezier(.77,0,.18,1) forwards;
 }
 
-/* Stagger the animation for each box in the grid */
+/* Stagger the animation for each box in the grid for services*/
 .service-box-grid .service-box:nth-child(1) { animation-delay: 0.1s; }
 .service-box-grid .service-box:nth-child(2) { animation-delay: 0.2s; }
 .service-box-grid .service-box:nth-child(3) { animation-delay: 0.3s; }
@@ -746,8 +800,8 @@ margin-right: 20px;
 
 .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Example: Reduced from 150px to 120px */
-  gap: 10px; /* Example: Reduced from 15px to 10px for tighter spacing */
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive columns */
+  gap: 10px; 
   justify-content: center;
   align-items: center;
 }
@@ -791,6 +845,8 @@ flex-direction: column;
 align-content: center;
 width:400px;
 text-align: left;
+  transform: translateY(30px);
+  animation: ListingFadeInUp 2s ease-out forwards;
 }
 
 form input,
@@ -839,3 +895,5 @@ form button:hover {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+
+
