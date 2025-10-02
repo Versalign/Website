@@ -6,30 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
     <title>Versalign</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-   <header>
-  <div class="topnav">
-    <img src="Versalign.png" alt="Versalign Logo" width="auto" height="auto">
-    <div class="nav-links" id="myLinks">
-      <a class="active" href="index.html">Home</a>
-      <a href="Services.html">Services</a>
-      <a href="About.html">About Us</a>
-      <a href="Contact.html">Contact Us</a>
-    </div>
-    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
-      <i class="fa fa-bars"></i>
-    </a>
+    <header>
+  <div class="topnav" id="myTopnav">
+  <img src="Versalign.png" alt="Versalign Logo">
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="Services.html">Services</a>
+    <a href="About.html">About Us</a>
+    <a href="Contact.html">Contact Us</a>
+    <button class="close-nav" onclick="toggleMenu()" style="display:none;">×</button>
   </div>
+  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 </header>
 
     <main>
 
 
-    <div class="slogan">
+   <div class="slogan">
   <img src="img/officestock2.jpg" alt="Office Stock Image" width="100%" height="auto">
   <div class="slogan-text">
     <span style="--i:0;">We </span>
@@ -43,10 +45,11 @@
 
 
 <div class="Explain">
+  <center>
 Versalign delivers innovative technology and expert consulting solutions to help businesses succeed.
 By developing an intimate understanding of our clients and using our creative and versatile approach,
  we are able to align our technology solutions directly with your business goals, 
-ensuring we meet our client's evolving business needs.
+ensuring we meet our client's evolving business needs.</center>
      </div>
 
 
@@ -149,12 +152,9 @@ ensuring we meet our client's evolving business needs.
     <img src="av/OMB.jpg" alt="AV Set Up">
   </div>
 </div>
+</main>
 
 
-
-
-
-    </main>
     <footer>
        <center>
         701 Cornell Drive <br>
