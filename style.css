@@ -145,11 +145,6 @@ body{
 
 
 
-.slogan {
-  position: relative;
-  z-index: 1;
-  width:auto;
-}
 
 /*TEXT*/
 h1{
@@ -352,9 +347,10 @@ footer{
 /* Slogan Section */
 .slogan {
   position: relative;
-  width: 100%;           /* Set a smaller width for the slogan box */ 
+  width: 100%;           
   overflow: hidden;       /* Ensures overlay and image have rounded corners */
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
 .slogan img {
@@ -368,7 +364,7 @@ footer{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: auto;
   height: 100%;
   background: rgba(0,0,0,0.5);
   color: #fff;
