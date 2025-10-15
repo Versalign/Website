@@ -104,7 +104,7 @@ body{
     cursor: pointer;
     background: none;
     border: none;
-  
+    z-index: 10001;
   }
   .topnav.responsive .nav-links {
     display: flex;
@@ -115,7 +115,7 @@ body{
     width: 100vw;
     height: 100vh;
     background-color: #003e00;
-
+    z-index: 10000;
     align-items: center;
     justify-content: center;
   }
@@ -136,7 +136,7 @@ body{
     cursor: pointer;
     background: none;
     border: none;
- 
+    z-index: 10002;
   }
 }
 
@@ -534,6 +534,7 @@ footer{
   padding: 12px 0 12px 0;
   border-bottom: 1px solid #fff;
   position: relative;
+  
 }
 
 .service-header i {
