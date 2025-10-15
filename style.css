@@ -826,9 +826,16 @@ margin-right: 20px;
  
 }
 
-
-
 /*Contact Form*/
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh; /* Optional: vertically center on full page */
+  box-sizing: border-box;
+}
+
 form {
 margin:40px;
 border: #000000 2px solid;
@@ -892,4 +899,34 @@ form button:hover {
   touch-action: manipulation;
 }
 
+
+@media screen and (max-width: 600px) {
+  .form-container {
+    min-height: unset;
+    padding: 0;
+  }
+  form {
+    width: auto;
+    min-width: 0;
+    margin: 16px auto;
+    padding: 4vw 2vw;
+    overflow-x: hidden;
+  }
+  form input,
+  form textarea {
+    width: auto;
+    min-width: 0;
+    margin: 8px 0;
+    padding: 14px;
+    font-size: 1rem;
+  }
+  form button {
+    width: auto;
+    min-width: 0;
+    margin: 16px 0 5px 0;
+    font-size: 1rem;
+    height: 48px;
+    padding: 5px 0;
+  }
+}
 
