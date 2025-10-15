@@ -104,7 +104,7 @@ body{
     cursor: pointer;
     background: none;
     border: none;
-    z-index: 10001;
+  
   }
   .topnav.responsive .nav-links {
     display: flex;
@@ -115,7 +115,7 @@ body{
     width: 100vw;
     height: 100vh;
     background-color: #003e00;
-    z-index: 10000;
+
     align-items: center;
     justify-content: center;
   }
@@ -136,7 +136,7 @@ body{
     cursor: pointer;
     background: none;
     border: none;
-    z-index: 10002;
+ 
   }
 }
 
@@ -913,7 +913,7 @@ form textarea {
 
 form button {
   font-weight: 700;
-  background: #ba55d3;
+  background: #229422;
   color: white;
   font-size: 15px;
   text-decoration: none;
@@ -938,8 +938,8 @@ form button:hover {
   border-radius: 30px;
   border: 0px;
   font-weight: 700;
-  box-shadow: 0px 0px 14px -7px #b100e8;
-  background-image: linear-gradient(45deg, #6a00f4 0%, #b100e8 51%, #6a00f4 100%);
+  box-shadow: 0px 0px 14px -7px #229422;
+  background-image: linear-gradient(45deg, #52b345 0%, #037e15 51%, #229422 100%);
   cursor: pointer;
   user-select: none;
   -webkit-user-select: none;
