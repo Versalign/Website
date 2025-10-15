@@ -144,12 +144,7 @@ body{
 
 
 
-/* Update slogan z-index to be lower than navigation */
-.slogan {
-  position: relative;
-  z-index: 1;
-  /* ...existing styles... */
-}
+
 
 /*TEXT*/
 h1{
@@ -355,6 +350,7 @@ footer{
   width: 100%;           /* Set a smaller width for the slogan box */ 
   overflow: hidden;       /* Ensures overlay and image have rounded corners */
   box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+   z-index: 1;
 }
 
 .slogan img {
